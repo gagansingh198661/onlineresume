@@ -1,9 +1,9 @@
 import { React } from 'react';
-import aboutme from '../Data/aboutme.js'
-
+import aboutme from '../Data/aboutme.js';
+import  '../css/Main.css';
 const AboutMe = ()=> {
     
-    return (<div>
+    return (<div className="container" style={{borderRadius:'10px'}}>
         
         <article>
         <h3>About Me</h3>
