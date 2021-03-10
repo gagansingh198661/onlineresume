@@ -4,3 +4,15 @@
     
     background-color: #ffffff ;
 }
+
+.hoverEffect:hover {
+    background: #ced4da;
+}
+
+.containerRight
+{
+   border-top-left-radius:5px;
+   border-top-right-radius:5px;
+   
+   background-color: #ffffff ;
+}

@@ -6,7 +6,9 @@ const AboutMe = ()=> {
     return (<div className="container" style={{borderRadius:'10px'}}>
         
         <article>
+            <div className="containerRight hoverEffect">
         <h3>About Me</h3>
+        </div>
         <p>
            {aboutme.description}
         </p>
