@@ -1,19 +1,45 @@
-import { React } from 'react';
 import aboutme from '../Data/aboutme.js';
 import  '../css/Main.css';
-const AboutMe = ()=> {
-    
-    return (<div className="container" style={{borderRadius:'10px'}}>
-        
-        <article>
-            <div className="containerRight hoverEffect">
-        <h3>About Me</h3>
-        </div>
-        <p>
-           {aboutme.description}
-        </p>
-        </article>
-    </div>);
-}
+import React from 'react';
+import {  createStyles, makeStyles } from '@material-ui/core/styles';
+import Accordion from '@material-ui/core/Accordion';
+import AccordionSummary from '@material-ui/core/AccordionSummary';
+import AccordionDetails from '@material-ui/core/AccordionDetails';
+import Typography from '@material-ui/core/Typography';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
-export default AboutMe;
+const useStyles = makeStyles((theme) =>
+  createStyles({
+    root: {
+      width: '100%',
+    },
+    heading: {
+      fontSize: theme.typography.pxToRem(15),
+      fontWeight: theme.typography.fontWeightRegular,
+    },
+  }),
+);
+
+export default function AboutMe() {
+  const classes = useStyles();
+
+  return (
+    <div className={classes.root}>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel2a-content"
+          id="panel2a-header" className="hoverEffect"
+        >
+          <Typography className={classes.heading}>About Me</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            {aboutme.description}
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      
+    </div>
+  );
+}
