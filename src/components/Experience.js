@@ -2,14 +2,8 @@ import  React  from 'react';
 import  '../css/Main.css';
 
 import WorkIcon from '@material-ui/icons/Work';
-
-import AccordionSummary from '@material-ui/core/AccordionSummary';
-import AccordionDetails from '@material-ui/core/AccordionDetails';
-import Typography from '@material-ui/core/Typography';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import experience_data from '../Data/experience';
 import { makeStyles, Theme, createStyles } from '@material-ui/core/styles';
-import ListSubheader from '@material-ui/core/ListSubheader';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -21,31 +15,6 @@ import ExpandMore from '@material-ui/icons/ExpandMore';
 import { StarBorder } from '@material-ui/icons';
 
 
-/*
-function Experience() {
-    const classes = useStyles();
-    return (
-      <Accordion>
-          <AccordionSummary className="hoverEffect" expandIcon={<ExpandMoreIcon/>} aria-controls="panel2a-content" id="panel2a-header">
-                <Typography className={classes.heading}>Experience</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-                <ul>
-                    {summary_data.map(function(summary){
-                    return (
-                        <li key={summary.id}>
-                            <div className="container">
-                                    <Typography className={classes.heading}>{summary.description}</Typography>
-                            </div>
-                        </li>
-                    );   
-                    })}
-                </ul>
-            </AccordionDetails>    
-      </Accordion>    
-      );
-  }
-*/
 
 
 const useStyles = makeStyles((theme) =>
