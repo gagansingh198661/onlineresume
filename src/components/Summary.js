@@ -27,16 +27,16 @@ const Summary = ()=> {
 
     return (<div className={classes.root}>
                 <Accordion >
-                <AccordionSummary className="hoverEffect" expandIcon={<ExpandMoreIcon/>} aria-controls="panel2a-content" id="panel2a-header">
-                    <Typography className={classes.heading}>Summary</Typography>
-                </AccordionSummary>
-                <AccordionDetails>
-                    <ul>
-                        {summary_data.map(function(summary){
-                        return (<li key={summary.id}>{summary.description}</li>);   
-                        })}
-                    </ul>
-                </AccordionDetails>    
+                    <AccordionSummary className="hoverEffect" expandIcon={<ExpandMoreIcon/>} aria-controls="panel2a-content" id="panel2a-header">
+                        <Typography className={classes.heading}>Summary</Typography>
+                    </AccordionSummary>
+                    <AccordionDetails>
+                        <ul>
+                            {summary_data.map(function(summary){
+                            return (<li key={summary.id}>{summary.description}</li>);   
+                            })}
+                        </ul>
+                    </AccordionDetails>    
                 </Accordion>
             </div>);
 }
