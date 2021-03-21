@@ -44,17 +44,13 @@ function  Experience(props) {
     
     
   const classes = useStyles();
-  const [open, setOpen] = React.useState(true);
+  const [open, setOpen] = React.useState(false);
 
   const handleClick = () => {
     setOpen(!open);
   };
 
-  const[innerOpen, setInnerOpen] = React.useState(true);
-  const handleClickInner = () => {
-    setInnerOpen(!innerOpen);
-  };
-
+ 
   return (
     <List
       component="div"
